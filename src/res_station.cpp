@@ -46,6 +46,18 @@ void res_station::exec()
             else
                 cout << "Divisao por 0, instrucao ignorada!" << endl;
         }
+        else if (op.substr(0,3) == "ABS")
+        {
+            if(vj < 0)
+                res = -vj;
+            else
+                res = vj;
+        }
+        else if(isMemory == false)
+        {
+            if(instr_pos < instr_queue_gui.size())
+                instr_queue_gui.at(instr_pos).text(EXEC,std::to_string(sc_time_stamp().value() / 1000)); //text(EXEC,"X");
+        }
         else if(isMemory == true)
         {
             a += vk;
