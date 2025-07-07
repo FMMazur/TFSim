@@ -53,6 +53,9 @@ void res_station::exec()
             else
                 res = vj;
         }
+        else if (op.substr(0,5) == "DSQRT") {
+            res = sqrt(vj);
+        }
         else if(isMemory == true)
         {
             a += vk;

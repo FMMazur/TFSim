@@ -60,6 +60,9 @@ void res_station_rob::exec()
                 else
                     res = vj;
             }
+            else if(op.substr(0,5) == "DSQRT") {
+              res = sqrt(vj);
+            }
             else if(isMemory)
             {
                 a += vk;

@@ -5,7 +5,7 @@ sc_module(name),
 table(lsbox)
 {
     //Divisao entre instrucoes de multiplicacao/divisao e subtracao/soma, novas instrucoes devem ser adcionadas manualmente aqui
-    res_type = {{"DADD",0},{"DADDI",0},{"DADDU",0},{"DADDIU",0},{"DSUB",0},{"DSUBU",0},{"DMUL",1},{"DMULU",1},{"DDIV",1},{"DDIVU",1},{"ABS",0}};
+    res_type = {{"DADD",0},{"DADDI",0},{"DADDU",0},{"DADDIU",0},{"DSUB",0},{"DSUBU",0},{"ABS",0},{"DMUL",1},{"DMULU",1},{"DDIV",1},{"DDIVU",1},{"DSQRT",1}};
     auto cat = table.at(0);
     string texto;
     rs.resize(t1+t2);

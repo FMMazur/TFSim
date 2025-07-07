@@ -87,7 +87,7 @@ int sc_main(int argc, char *argv[])
     // Tempo de latencia de uma instrucao
     // Novas instrucoes devem ser inseridas manualmente aqui
     map<string,int> instruct_time{{"DADD",4},{"DADDI",4},{"DSUB",6},
-    {"DSUBI",6},{"DMUL",10},{"DDIV",16},{"ABS",2},{"MEM",2},
+    {"DSUBI",6},{"DMUL",10},{"DDIV",16},{"ABS",2},{"DSQRT",20},{"MEM",2},
     {"SLT",1},{"SGT", 1}};
     // Responsavel pelos modos de execução
     top top1("top");
