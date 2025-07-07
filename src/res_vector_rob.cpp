@@ -5,7 +5,7 @@ res_vector_rob::res_vector_rob(sc_module_name name,unsigned int t1, unsigned int
 sc_module(name),
 table(lsbox)
 {
-    res_type = {{"DADD",0},{"DADDI",0},{"DADDU",0},{"DADDIU",0},{"DSUB",0},{"DSUBU",0},{"DMUL",1},{"DMULU",1},{"DDIV",1},{"DDIVU",1}};
+    res_type = {{"DADD",0},{"DADDI",0},{"DADDU",0},{"DADDIU",0},{"DSUB",0},{"DSUBU",0},{"DMUL",1},{"DMULU",1},{"DDIV",1},{"DDIVU",1},{"ABS",0}};
     auto cat = table.at(0);
     string texto;
     rs.resize(t1+t2);

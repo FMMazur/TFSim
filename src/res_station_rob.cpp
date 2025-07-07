@@ -53,6 +53,13 @@ void res_station_rob::exec()
                 else
                     cout << "Divisao por 0, instrucao ignorada!" << endl;
             }
+            else if (op.substr(0,3) == "ABS")
+            {
+                if(vj < 0)
+                    res = -vj;
+                else
+                    res = vj;
+            }
             else if(isMemory)
             {
                 a += vk;

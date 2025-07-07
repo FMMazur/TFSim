@@ -87,7 +87,7 @@ int sc_main(int argc, char *argv[])
     // Tempo de latencia de uma instrucao
     // Novas instrucoes devem ser inseridas manualmente aqui
     map<string,int> instruct_time{{"DADD",4},{"DADDI",4},{"DSUB",6},
-    {"DSUBI",6},{"DMUL",10},{"DDIV",16},{"MEM",2},
+    {"DSUBI",6},{"DMUL",10},{"DDIV",16},{"ABS",2},{"MEM",2},
     {"SLT",1},{"SGT", 1}};
     // Responsavel pelos modos de execução
     top top1("top");
@@ -185,6 +185,7 @@ int sc_main(int argc, char *argv[])
         inputbox::text dsubi_t("DSUBI",std::to_string(instruct_time["DSUBI"]));
         inputbox::text dmul_t("DMUL",std::to_string(instruct_time["DMUL"]));
         inputbox::text ddiv_t("DDIV",std::to_string(instruct_time["DDIV"]));
+        inputbox::text abs_t("ABS",std::to_string(instruct_time["ABS"]));
         inputbox::text mem_t("Load/Store",std::to_string(instruct_time["MEM"]));
         if(ibox.show_modal(dadd_t,daddi_t,dsub_t,dsubi_t,dmul_t,ddiv_t,mem_t))
         {
@@ -194,6 +195,7 @@ int sc_main(int argc, char *argv[])
             instruct_time["DSUBI"] = std::stoi(dsubi_t.value());
             instruct_time["DMUL"] = std::stoi(dmul_t.value());
             instruct_time["DDIV"] = std::stoi(ddiv_t.value());
+            instruct_time["ABS"] = std::stoi(abs_t.value());
             instruct_time["MEM"] = std::stoi(mem_t.value());
         }
     });
