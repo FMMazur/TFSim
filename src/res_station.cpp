@@ -1,5 +1,6 @@
 #include "res_station.hpp"
 #include "general.hpp"
+#include "math.hpp"
 
 
 res_station::res_station(sc_module_name name,int i, string n, bool isMem, map<string,int> inst_map, const nana::listbox::item_proxy item, const nana::listbox::cat_proxy c):
@@ -54,7 +55,7 @@ void res_station::exec()
                 res = vj;
         }
         else if (op.substr(0,5) == "DSQRT") {
-            res = sqrt(vj);
+            res = vj * Q_rsqrt(vj);
         }
         else if(isMemory == true)
         {
